@@ -1,10 +1,13 @@
 package com.hadis.newsapplication
 
+import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface API {
     @GET("top-Headline")
-
-
-    fun getNews()
+    suspend fun getNews(
+        @Query("source") source : String,
+        @Query("apiKey") apiKey : String
+    ): Response<ResponseModel>
 }
