@@ -13,4 +13,4 @@ data class News(
 }
 //say POJO
 
-//https://newsapi.org/v2/top-headlines?sources=techcrunch&apikey=2480c92d4b7a40c3ad46f1fe47e99a15
+// https://newsapi.org/v2/top-headlines?country=us&apiKey=2480c92d4b7a40c3ad46f1fe47e99a15

@@ -33,14 +33,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    // buildFeatures{
-    //  viewBinding = true
-    //  }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.squareup.retrofit2:converter-gson:2.1.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")

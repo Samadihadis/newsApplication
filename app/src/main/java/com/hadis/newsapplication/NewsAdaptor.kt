@@ -15,15 +15,15 @@ class NewsAdaptor(var newsList: MutableList<News> , var context : Context) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView
         val description: TextView
-        val dateAndWriter: TextView
+        val dateAndAuthor: TextView
         val image: ImageView
 
         init {
             view.apply {
-                title = findViewById(R.id.titleTV)
-                description = findViewById(R.id.descTV)
-                dateAndWriter = findViewById(R.id.dateWriter)
-                image = findViewById(R.id.imageView1)
+                title = findViewById(R.id.titleTextView)
+                description = findViewById(R.id.descriptionTextView)
+                dateAndAuthor = findViewById(R.id.dateAndAuthorTextView)
+                image = findViewById(R.id.avatarImageView)
             }
         }
     }
@@ -43,7 +43,7 @@ class NewsAdaptor(var newsList: MutableList<News> , var context : Context) :
         holder.apply {
             title.text = newsList[position].title
             description.text = newsList[position].description
-            dateAndWriter.text = newsList[position].publishedAt + " " + newsList[position].author
+            dateAndAuthor.text = newsList[position].publishedAt + "\n" + newsList[position].author
             Glide.with(context).load(newsList[position].urlToImage).into(image)
         }
 
