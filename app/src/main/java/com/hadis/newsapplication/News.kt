@@ -9,8 +9,4 @@ data class News(
     val title: String,
     val url: String,
     val urlToImage: String
-) {
-}
-//say POJO
-
-// https://newsapi.org/v2/top-headlines?country=us&apiKey=2480c92d4b7a40c3ad46f1fe47e99a15
+)

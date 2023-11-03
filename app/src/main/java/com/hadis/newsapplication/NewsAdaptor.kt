@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class NewsAdaptor(var newsList: MutableList<News> , var context : Context) :
+class NewsAdaptor(var newsList: List<News> , var context : Context) :
     RecyclerView.Adapter<NewsAdaptor.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -36,9 +36,7 @@ class NewsAdaptor(var newsList: MutableList<News> , var context : Context) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_schema, parent, false)
-
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_schema, parent, false)
         return ViewHolder(view)
     }
 
